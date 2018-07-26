@@ -36,7 +36,7 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = str.replace(/kn[a-zA-Z]+[ \.]/gi, function (x) {
+	v = v.replace(/kn[a-zA-Z]+[ \.]/gi, function (x) {
         	return x + "(pronounced key-" + x.substring(1, x.length - 1) + ") ";
         });
 	
