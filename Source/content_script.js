@@ -7,10 +7,7 @@ function walk(node)
 	
 	var child, next;
 	
-	if (node.tagName.toLowerCase() == 'input' || node.tagName.toLowerCase() == 'textarea'
-	    || node.classList.indexOf('ace_editor') > -1) {
-		return;
-	}
+	if (node.nodeName.toLowerCase() == 'input' || node.nodeName.toLowerCase() == 'textarea' || (node.classList && node.classList.contains('ace_editor'))) { return; }
 
 	switch ( node.nodeType )  
 	{
@@ -36,10 +33,10 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-        v = v.replace(/\bkn[a-zA-Z]+\b/g, function (x) {
-        	return x + " (pronounced key-" + x.substring(1) + ") ";
+	v = v.replace(/\bkn[a-zA-Z]+\b/g, function (x) {
+        	return x + " (pronounced key-" + x.substring(1) + ")";
         });
-	
+
 	textNode.nodeValue = v;
 }
 
