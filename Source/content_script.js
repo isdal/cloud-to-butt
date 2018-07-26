@@ -36,10 +36,9 @@ function handleText(textNode)
 {
 	var v = textNode.nodeValue;
 
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
+	v = str.replace(/kn[a-zA-Z]+[ \.]/gi, function (x) {
+        	return x + "(pronounced key-" + x.substring(1, x.length - 1) + ") ";
+        });
 	
 	textNode.nodeValue = v;
 }
