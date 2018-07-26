@@ -2,7 +2,7 @@
 	"manifest_version": 2,
 	"name": "Knative pronounciation help",
 	"version": "1.0",
-	"description": "Clarifies pronounciation of Knative (and other kn words)",
+	"description": "Clarifies pronunciation of Knative (and other kn words)",
 	"content_scripts": 
 	[
 		{
